@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:p="http://www.springframework.org/schema/p"
+     xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+<!--  
+<bean id="myResolver" class="in.nareshit.MyResolver">
+		<property name="prefix" >
+			<value> "my manual prefix" </value>
+		</property>
+		
+		<property name="suffix" >
+			<value> "my manual suffix" </value>
+		</property>
+</bean>
+
+
+<bean id="myResolver" class="in.nareshit.MyResolver" >
+		<property name="prefix" value="my manual prefix" />
+		<property name="suffix" value="my manual suffix" />
+</bean>
+
+-->
+
+<bean id="myResolver" class="in.nareshit.MyResolver" p:prefix="my mnual prefix" p:suffix="my manual suffix" />
+<bean id="securityModel" class="in.nareshit.SecurityModel" p:role="my role" p:format="my format" p:access="my access" />
+<bean id="mySecurityModel" class="in.nareshit.SecurityModel" >
+		<property name="role" value="my manual role" />
+		<property name="format" value="my manual format" />
+		<property name="access" value="my manual access" />
+		
+</bean>
+
+<bean id="mySecurityModel1" class="in.nareshit.SecurityModel">
+		<property name="role" >
+			<value> my manual role </value>
+		</property>
+		
+		<property name="format" >
+			<value>my manual format</value>
+		</property>
+		
+		<property name="access" >
+			<value>my manual access</value>
+		</property>
+</bean>
+
+
+</beans>
